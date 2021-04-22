@@ -13,6 +13,9 @@
 		A145EA1026314DF0001CE8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A145EA0E26314DF0001CE8DE /* Main.storyboard */; };
 		A145EA1226314DF3001CE8DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A145EA1126314DF3001CE8DE /* Assets.xcassets */; };
 		A145EA1526314DF3001CE8DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A145EA1326314DF3001CE8DE /* LaunchScreen.storyboard */; };
+		A145EA202631586C001CE8DE /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145EA1F2631586C001CE8DE /* Song.swift */; };
+		A145EA24263158F6001CE8DE /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145EA23263158F6001CE8DE /* ViewModel.swift */; };
+		A145EA282631591B001CE8DE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145EA272631591B001CE8DE /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A145EA1126314DF3001CE8DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A145EA1426314DF3001CE8DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A145EA1626314DF3001CE8DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A145EA1F2631586C001CE8DE /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A145EA23263158F6001CE8DE /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A145EA272631591B001CE8DE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,42 @@
 		A145EA0726314DF0001CE8DE /* SearchBarInTableViewHeader */ = {
 			isa = PBXGroup;
 			children = (
+				A145EA22263158CD001CE8DE /* Module */,
+				A145EA1E26315840001CE8DE /* Model */,
+				A145EA1D2631583B001CE8DE /* Service */,
 				A145EA0826314DF0001CE8DE /* AppDelegate.swift */,
 				A145EA0A26314DF0001CE8DE /* SceneDelegate.swift */,
-				A145EA0C26314DF0001CE8DE /* ViewController.swift */,
 				A145EA0E26314DF0001CE8DE /* Main.storyboard */,
 				A145EA1126314DF3001CE8DE /* Assets.xcassets */,
 				A145EA1326314DF3001CE8DE /* LaunchScreen.storyboard */,
 				A145EA1626314DF3001CE8DE /* Info.plist */,
 			);
 			path = SearchBarInTableViewHeader;
+			sourceTree = "<group>";
+		};
+		A145EA1D2631583B001CE8DE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A145EA272631591B001CE8DE /* APIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A145EA1E26315840001CE8DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A145EA1F2631586C001CE8DE /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A145EA22263158CD001CE8DE /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A145EA0C26314DF0001CE8DE /* ViewController.swift */,
+				A145EA23263158F6001CE8DE /* ViewModel.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A145EA24263158F6001CE8DE /* ViewModel.swift in Sources */,
+				A145EA202631586C001CE8DE /* Song.swift in Sources */,
 				A145EA0D26314DF0001CE8DE /* ViewController.swift in Sources */,
 				A145EA0926314DF0001CE8DE /* AppDelegate.swift in Sources */,
+				A145EA282631591B001CE8DE /* APIService.swift in Sources */,
 				A145EA0B26314DF0001CE8DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
