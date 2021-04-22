@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
 
@@ -89,7 +90,7 @@ class ItemCell: UITableViewCell {
     var songViewModel: SongCellViewModel? {
         didSet {
             nameLabel.text = songViewModel?.name
-            
+            photoImageView.sd_setImage(with: songViewModel?.imageUrl, completed: nil)
         }
     }
 }
