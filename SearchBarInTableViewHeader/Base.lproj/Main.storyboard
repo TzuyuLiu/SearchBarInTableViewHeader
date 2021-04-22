@@ -46,7 +46,6 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
                                             <constraints>
                                                 <constraint firstItem="HfF-nz-pQK" firstAttribute="top" secondItem="YDc-vc-OFp" secondAttribute="top" constant="12" id="1y6-TR-Prq"/>
                                                 <constraint firstAttribute="trailing" secondItem="HfF-nz-pQK" secondAttribute="trailing" constant="12" id="3Rv-65-Gbg"/>
@@ -85,9 +84,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

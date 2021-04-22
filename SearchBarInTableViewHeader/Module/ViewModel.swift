@@ -44,6 +44,7 @@ class SongViewModel {
     func initFetch(parms:[String:String]) {
         self.isLoading = true
         apiService.fetchSongs(parameters: parms) { (result, songs, error) in
+            self.isLoading = false
             if let error = error {
                 self.alertMessage = error.rawValue
             } else {
