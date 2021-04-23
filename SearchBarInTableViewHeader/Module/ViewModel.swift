@@ -68,6 +68,23 @@ class SongViewModel {
         self.cellViewModels = vms
     }
     
+    //過濾歌單
+    func filterFetchedSong(specificWord:String) {
+        var vms = [SongCellViewModel]()
+        
+        for song in songs {
+            vms.append(self.createCellViewModel(song: song))
+            cellViewModels = vms
+        }
+        
+        if !specificWord.isEmpty {
+            vms = cellViewModels.filter({
+                $0.name.contains(specificWord)
+            })
+            cellViewModels = vms
+        }
+    }
+    
     func getCellViewMode( at indexPath: IndexPath) -> SongCellViewModel {
         return cellViewModels[indexPath.row]
     }

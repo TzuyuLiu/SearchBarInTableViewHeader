@@ -12,7 +12,8 @@ class SongViewController: UIViewController {
 
     @IBOutlet weak var songTableView: UITableView!
     @IBOutlet weak var songSearchBar: UISearchBar!
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     lazy var viewModel: SongViewModel = {
         return SongViewModel()
     }()
@@ -40,10 +41,12 @@ class SongViewController: UIViewController {
             DispatchQueue.main.async {
                 let isLoading = self?.viewModel.isLoading ?? false
                 if isLoading {
+                    self?.activityIndicator.startAnimating()
                     UIView.animate(withDuration: 0.2, animations: {
                         self?.songTableView.alpha = 0.0
                     })
                 } else {
+                    self?.activityIndicator.stopAnimating()
                     UIView.animate(withDuration: 0.2, animations: {
                         self?.songTableView.alpha = 1.0
                     })
@@ -86,7 +89,16 @@ extension SongViewController:UITableViewDelegate,UITableViewDataSource {
 }
 
 extension SongViewController:UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.filterFetchedSong(specificWord: searchBar.text ?? "")
+        searchBar.resignFirstResponder()
+    }
     
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
+        viewModel.filterFetchedSong(specificWord: "")
+    }
 }
 
 class ItemCell: UITableViewCell {
